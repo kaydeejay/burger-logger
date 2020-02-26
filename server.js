@@ -12,6 +12,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 const routes = require('./controllers/controller.js');
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log('server listening on: http://localhost.' + PORT);
