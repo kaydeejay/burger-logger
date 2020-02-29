@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+}
+
+.not-eaten, .eaten {
+  width: 50%;
+  float: left;
+}
