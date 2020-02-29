@@ -33,7 +33,7 @@ $(document).ready(function(){
 
   $(".delete-burger").on("click", function(event){
     let id = $(this).data("id");
-    
+    console.log($(this));
     $.ajax('/api/burgers/' + id, {
       type: "DELETE"
     }).then(function(){

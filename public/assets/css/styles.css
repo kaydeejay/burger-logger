@@ -5,20 +5,30 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+  background-image: url("../images/burger-bg.jpg");
+  background-repeat: repeat;
+}
+
 h1 {
   text-align: center;
-  margin: 1em;
+  margin: 1em auto;
+  width: 33%;
+  border: 5px solid yellow;
 }
 
 .burgers-row {
   text-align: center;
+  margin: 0 auto;
+  /* width: 50%; */
 }
 
 .not-eaten, .eaten {
-  float: left;
-  display: block;
+  display: inline-block;
   width: 40%;
   margin-left: 1em;
+  border: 5px solid yellow;
+  padding: 2rem 0 2rem 0;
 }
 
 button {
@@ -28,8 +38,14 @@ button {
 
 .add-a-burger {
   display: block;
-  width: 100%;
+  width: 40%;
   clear: both;
+  margin: 2rem auto;
+  border: 5px solid yellow;
+  padding: 2rem 0 2rem 0;
+}
+
+.add-a-burger > h2 {
   text-align: center;
 }
 
@@ -43,4 +59,8 @@ input {
   padding: 0.5em;
   background-color: #c9c9c9;
   border: 1px solid black;
+}
+
+.gray-bg {
+  background-color: #c7c7c7;
 }
