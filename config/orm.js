@@ -36,7 +36,6 @@ const orm = {
   },
   create: (table, cols, vals, cb) => {
     let queryString = `INSERT INTO ${table} (`;
-
     queryString += `${cols.toString()}) `;
     queryString += `VALUES (${printQuestionMarks(vals.length)}) `
 
@@ -48,5 +47,27 @@ const orm = {
       }
       cb(result);
     });
+  },
+  update: (table, objColVals, condition, cb) => {
+    let queryString = `UPDATE ${table} `;
+    queryString += `SET ${objColVals} WHERE ${condition}`;
+
+    console.log(queryString);
+    connection.query(queryString, (err,res) => {
+      if (err) throw err;
+      cb(res);
+    })
+  },
+  delete: (table, condition, cb) => {
+    let queryString = `DELETE FROM ${table}`;
+    queryString += ` WHERE ${condition}`;
+
+    console.log(queryString);
+    connection.query(queryString, (err,res) => {
+      if (err) throw err;
+      cb(res);
+    });
   }
 };
+
+module.exports = orm;
