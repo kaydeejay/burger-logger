@@ -1,8 +1,46 @@
-.btn {
-  background-color: #4aaaa5;
-  display: inline;
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.button-container {
+h1 {
+  text-align: center;
+  margin: 1em;
+}
+
+.burgers-row {
+  text-align: center;
+}
+
+.not-eaten, .eaten {
+  float: left;
   display: block;
+  width: 40%;
+  margin-left: 1em;
+}
+
+button {
+  background-color: #4aaaa5;
+  padding: 0.5rem;
+}
+
+.add-a-burger {
+  display: block;
+  width: 100%;
+  clear: both;
+  text-align: center;
+}
+
+.create-form {
+  text-align: left;
+  width: 25%;
+  margin: 0 auto;
+}
+
+input {
+  padding: 0.5em;
+  background-color: #c9c9c9;
+  border: 1px solid black;
 }
