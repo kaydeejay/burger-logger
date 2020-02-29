@@ -7,7 +7,7 @@ const burger = {
     });
   },
   create: (colsArr, valsArr, cb) => {
-    orm.create('burgers', cols, vals, (res) => {
+    orm.create('burgers', colsArr, valsArr, (res) => {
       cb(res);
     });
   },

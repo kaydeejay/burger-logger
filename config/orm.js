@@ -45,12 +45,12 @@ const orm = {
       if (err) {
         throw err;
       }
-      cb(result);
+      cb(res);
     });
   },
   update: (table, objColVals, condition, cb) => {
     let queryString = `UPDATE ${table} `;
-    queryString += `SET ${objColVals} WHERE ${condition}`;
+    queryString += `SET ${objToSql(objColVals)} WHERE ${condition}`;
 
     console.log(queryString);
     connection.query(queryString, (err,res) => {
